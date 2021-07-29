@@ -33,6 +33,7 @@
 
                     var selectOptions = '<option></option>';
                     var storeID = currentUrl.searchParams.get("storeID");
+                    var description = furniture.description;
                     var storesInCountry = JSON.parse(localStorage.getItem('storesInCountry'));
                     for (i = 0; i < storesInCountry.length; i++) {
                         var store = storesInCountry[i];
@@ -44,6 +45,8 @@
                         }
                     }
                     document.getElementById("storeID").innerHTML = selectOptions;
+
+                    document.getElementById("description").innerHTML = description;
 
                     var quantityDivTxt = 'Status: ';
                     var itemQty = currentUrl.searchParams.get("itemQty");
